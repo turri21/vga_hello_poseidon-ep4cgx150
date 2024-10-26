@@ -1,4 +1,4 @@
-module vga_hello_world(
+module vga_hello(
     input wire CLOCK_50,        // 50 MHz clock input
     input wire reset,           // Reset signal
     output wire VGA_HS,         // Horizontal sync signal
