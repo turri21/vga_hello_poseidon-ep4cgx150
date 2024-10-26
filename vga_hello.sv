@@ -122,7 +122,7 @@ wire [2:0] col_index_O = h_count - (h_center + 40);
 
 // Pixel on/off for "H", "E", "L", "L", and "O" based on bitmap data
 reg pixel_on;
-always @(*) begin
+always @(posedge clk_vga) begin
     pixel_on = 1'b0; // Default to off
     if (is_H_area) begin
         pixel_on = char_H[row_index][7 - col_index_H]; // "H"
