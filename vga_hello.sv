@@ -112,7 +112,7 @@ module vga_hello(
     wire is_O_area = (h_count >= h_center + 40) && (h_count < h_center + 48) &&
                      (v_count >= v_center) && (v_count < v_center + 8);
 
-    // Calculate row and column within the character grid
+// Calculate row and column within the character grid
 wire [2:0] row_index = v_count - v_center;
 wire [2:0] col_index_H = h_count - h_center;
 wire [2:0] col_index_E = h_count - (h_center + 10);
